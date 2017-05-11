@@ -3,9 +3,9 @@ title: "Frequency of Steps per Interval"
 author: "Daniel Flick"
 date: "May 10, 2017"
 output:
+  md_document: null
   html_document: default
-  pdf_document: default
-  word_document: default
+  variant: markdown_github
 ---
 
 ```{r setup, include=FALSE}
@@ -129,11 +129,5 @@ plot(avgintervalday$interval,avgintervalday$meansteps.dayinterval,type='l',xlab=
 lines(avgintervalend$interval,avgintervalend$meansteps.endinterval,type='l',col="blue")
 legend("topright",c("Weekday","Weekend"),lwd=c(2.5,2.5),col=c("red","blue"))
 
-```
-
-```{r}
-
-knit2html("PA1_template.rmd")
-render("PA1_template.rmd")
 ```
 
