@@ -4,6 +4,7 @@ author: "Daniel Flick"
 date: "May 10, 2017"
 output:
   html_document: default
+  pdf_document: default
   word_document: default
 ---
 
@@ -128,5 +129,11 @@ plot(avgintervalday$interval,avgintervalday$meansteps.dayinterval,type='l',xlab=
 lines(avgintervalend$interval,avgintervalend$meansteps.endinterval,type='l',col="blue")
 legend("topright",c("Weekday","Weekend"),lwd=c(2.5,2.5),col=c("red","blue"))
 
+```
+
+```{r}
+
+knit2html("PA1_template.rmd")
+render("PA1_template.rmd")
 ```
 
